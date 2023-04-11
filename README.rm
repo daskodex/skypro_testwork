@@ -1,0 +1,20 @@
+╔═══╗╔╗       ╔═══╗
+║╔═╗║║║       ║╔═╗║
+║╚══╗║║╔╗╔╗ ╔╗║╚═╝║╔═╗╔══╗
+╚══╗║║╚╝╝║║ ║║║╔══╝║╔╝║╔╗║
+║╚═╝║║╔╗╗║╚═╝║║║   ║║ ║╚╝║
+╚═══╝╚╝╚╝╚═╗╔╝╚╝   ╚╝ ╚══╝
+         ╔═╝║
+         ╚══╝
+
+Запуск:
+git clone
+git init
+python -m venv venv
+run environment
+pip install -r requirements.txt
+python manage.py runserver
+python manage.py test
+get fun :)
+
+Тестовое код ревью. Дорофеев Владимир
