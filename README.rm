@@ -17,4 +17,13 @@ python manage.py runserver
 python manage.py test
 get fun :)
 
+Endpoint:
+
+GET:
+/resume
+/resume/{n}
+
+PATCH (AUTH):
+/resume/{n}
+
 Тестовое код ревью. Дорофеев Владимир
