@@ -1,36 +1,17 @@
-"""
-Tests for content parsing, and form-overloaded content parsing.
-"""
-import copy
-import os.path
-import sys
-import tempfile
-
-import pytest
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.middleware import AuthenticationMiddleware
 from django.contrib.auth.models import User
-from django.contrib.sessions.middleware import SessionMiddleware
-from django.core.files.uploadedfile import SimpleUploadedFile
-from django.http.request import RawPostDataException
 from django.test import TestCase, override_settings
-from django.urls import path
 from .models import SimplePerson
 from .serializers import SimplePersonSerializer
 
-from django.urls import reverse
 from rest_framework import status
-from rest_framework.authentication import SessionAuthentication
-from rest_framework.parsers import BaseParser, FormParser, MultiPartParser
 from rest_framework.request import Request, WrappedAttributeError
-from rest_framework.response import Response
 from rest_framework.test import APIClient, APIRequestFactory, RequestsClient, APITestCase
-from rest_framework.views import APIView
 
 factory = APIRequestFactory()
 
 
 class TestInitializer(TestCase):
+
     def test_request_type(self):
         request = Request(factory.get('/'))
 
@@ -43,6 +24,7 @@ class TestInitializer(TestCase):
 
 
 class TestGetPatchMethod(APITestCase):
+    """ Оснавная группа тестов, проверяюся PATCH и GET запросы"""
 
     def setUp(self):
         self.url_endpoint = '/resume/'
